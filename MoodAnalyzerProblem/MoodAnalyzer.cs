@@ -8,7 +8,7 @@ namespace MoodAnalyzerProblem
 {
     public class MoodAnalyzer
     {
-        string message;
+        public string message;
 
         public MoodAnalyzer()
         {
