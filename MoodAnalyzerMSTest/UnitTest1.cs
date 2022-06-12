@@ -2,7 +2,6 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MoodAnalyzerProblem;
 
-
 namespace MoodAnalyzerMSTest
 {
     [TestClass]
@@ -88,6 +87,15 @@ namespace MoodAnalyzerMSTest
             {
                 Assert.AreEqual("Mood should not be empty", ex.Message);
             }
+        }
+
+        [TestMethod]
+        public void GivenMoodAnalyzeClasssNameShouldReturnMoodAnalyzeObject()
+        {
+            string message = null;
+            object expected = new MoodAnalyzer(message);
+            object obj = MoodAnalyzerFactory.CreateMoodAnalyze("MoodAnalyzerProblem.MoodAnalyzer", "MoodAnalyzer");
+            expected.Equals(obj);
         }
     }
 }
